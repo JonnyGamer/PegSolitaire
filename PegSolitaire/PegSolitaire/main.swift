@@ -7,5 +7,14 @@
 
 import Foundation
 
-print("Hello, World!")
+//1
+//4
+//20
+//120
+//792
+//5776
+//46424
+//392224
+//3352088
 
+PegSolitaireAdvanced().allSolutions()

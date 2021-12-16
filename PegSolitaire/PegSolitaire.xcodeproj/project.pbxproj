@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1BA5BAFB276BB0870078E6A8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BAFA276BB0870078E6A8 /* main.swift */; };
+		1BA5BB02276BBB230078E6A8 /* PegSolitaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB01276BBB230078E6A8 /* PegSolitaire.swift */; };
+		1BA5BB04276BBB7A0078E6A8 /* PegSolitaireAdvanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB03276BBB7A0078E6A8 /* PegSolitaireAdvanced.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		1BA5BAF7276BB0870078E6A8 /* PegSolitaire */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PegSolitaire; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA5BAFA276BB0870078E6A8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1BA5BB01276BBB230078E6A8 /* PegSolitaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PegSolitaire.swift; sourceTree = "<group>"; };
+		1BA5BB03276BBB7A0078E6A8 /* PegSolitaireAdvanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PegSolitaireAdvanced.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				1BA5BAFA276BB0870078E6A8 /* main.swift */,
+				1BA5BB03276BBB7A0078E6A8 /* PegSolitaireAdvanced.swift */,
+				1BA5BB01276BBB230078E6A8 /* PegSolitaire.swift */,
 			);
 			path = PegSolitaire;
 			sourceTree = "<group>";
@@ -119,7 +125,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA5BB04276BBB7A0078E6A8 /* PegSolitaireAdvanced.swift in Sources */,
 				1BA5BAFB276BB0870078E6A8 /* main.swift in Sources */,
+				1BA5BB02276BBB230078E6A8 /* PegSolitaire.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +255,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R3PU6JKY2A;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

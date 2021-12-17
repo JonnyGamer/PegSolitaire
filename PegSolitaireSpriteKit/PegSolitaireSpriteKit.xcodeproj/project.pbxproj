@@ -16,6 +16,15 @@
 		1BA5BB2C276D08880078E6A8 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB2B276D08880078E6A8 /* Tile.swift */; };
 		1BA5BB2E276D12300078E6A8 /* HexScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB2D276D12300078E6A8 /* HexScene.swift */; };
 		1BA5BB30276D12440078E6A8 /* PegSolitaireHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB2F276D12440078E6A8 /* PegSolitaireHex.swift */; };
+		1BA5BB38276D1BED0078E6A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB37276D1BED0078E6A8 /* AppDelegate.swift */; };
+		1BA5BB40276D1BED0078E6A8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB3F276D1BED0078E6A8 /* GameViewController.swift */; };
+		1BA5BB43276D1BED0078E6A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA5BB41276D1BED0078E6A8 /* Main.storyboard */; };
+		1BA5BB45276D1BEE0078E6A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA5BB44276D1BEE0078E6A8 /* Assets.xcassets */; };
+		1BA5BB4A276D1BFF0078E6A8 /* HexScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB2D276D12300078E6A8 /* HexScene.swift */; };
+		1BA5BB4B276D1BFF0078E6A8 /* PegSolitaireAdvanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB29276D07940078E6A8 /* PegSolitaireAdvanced.swift */; };
+		1BA5BB4C276D1BFF0078E6A8 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB2B276D08880078E6A8 /* Tile.swift */; };
+		1BA5BB4D276D1BFF0078E6A8 /* PegSolitaireHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB2F276D12440078E6A8 /* PegSolitaireHex.swift */; };
+		1BA5BB4E276D1BFF0078E6A8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB19276D072E0078E6A8 /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +40,23 @@
 		1BA5BB2B276D08880078E6A8 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		1BA5BB2D276D12300078E6A8 /* HexScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexScene.swift; sourceTree = "<group>"; };
 		1BA5BB2F276D12440078E6A8 /* PegSolitaireHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PegSolitaireHex.swift; sourceTree = "<group>"; };
+		1BA5BB35276D1BEC0078E6A8 /* PegSolitaireIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PegSolitaireIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA5BB37276D1BED0078E6A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1BA5BB3F276D1BED0078E6A8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		1BA5BB42276D1BED0078E6A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1BA5BB44276D1BEE0078E6A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BA5BB46276D1BEE0078E6A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1BA5BB0D276D072E0078E6A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA5BB32276D1BEC0078E6A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,7 +69,13 @@
 		1BA5BB07276D072E0078E6A8 = {
 			isa = PBXGroup;
 			children = (
+				1BA5BB19276D072E0078E6A8 /* GameScene.swift */,
+				1BA5BB29276D07940078E6A8 /* PegSolitaireAdvanced.swift */,
+				1BA5BB2D276D12300078E6A8 /* HexScene.swift */,
+				1BA5BB2F276D12440078E6A8 /* PegSolitaireHex.swift */,
+				1BA5BB2B276D08880078E6A8 /* Tile.swift */,
 				1BA5BB12276D072E0078E6A8 /* PegSolitaireSpriteKit */,
+				1BA5BB36276D1BEC0078E6A8 /* PegSolitaireIOS */,
 				1BA5BB11276D072E0078E6A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				1BA5BB10276D072E0078E6A8 /* PegSolitaireSpriteKit.app */,
+				1BA5BB35276D1BEC0078E6A8 /* PegSolitaireIOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,11 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				1BA5BB13276D072E0078E6A8 /* AppDelegate.swift */,
-				1BA5BB19276D072E0078E6A8 /* GameScene.swift */,
-				1BA5BB29276D07940078E6A8 /* PegSolitaireAdvanced.swift */,
-				1BA5BB2D276D12300078E6A8 /* HexScene.swift */,
-				1BA5BB2F276D12440078E6A8 /* PegSolitaireHex.swift */,
-				1BA5BB2B276D08880078E6A8 /* Tile.swift */,
 				1BA5BB1B276D072E0078E6A8 /* ViewController.swift */,
 				1BA5BB1D276D07300078E6A8 /* Assets.xcassets */,
 				1BA5BB1F276D07300078E6A8 /* Main.storyboard */,
@@ -76,6 +100,18 @@
 				1BA5BB23276D07300078E6A8 /* PegSolitaireSpriteKit.entitlements */,
 			);
 			path = PegSolitaireSpriteKit;
+			sourceTree = "<group>";
+		};
+		1BA5BB36276D1BEC0078E6A8 /* PegSolitaireIOS */ = {
+			isa = PBXGroup;
+			children = (
+				1BA5BB37276D1BED0078E6A8 /* AppDelegate.swift */,
+				1BA5BB3F276D1BED0078E6A8 /* GameViewController.swift */,
+				1BA5BB41276D1BED0078E6A8 /* Main.storyboard */,
+				1BA5BB44276D1BEE0078E6A8 /* Assets.xcassets */,
+				1BA5BB46276D1BEE0078E6A8 /* Info.plist */,
+			);
+			path = PegSolitaireIOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +134,23 @@
 			productReference = 1BA5BB10276D072E0078E6A8 /* PegSolitaireSpriteKit.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1BA5BB34276D1BEC0078E6A8 /* PegSolitaireIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BA5BB47276D1BEE0078E6A8 /* Build configuration list for PBXNativeTarget "PegSolitaireIOS" */;
+			buildPhases = (
+				1BA5BB31276D1BEC0078E6A8 /* Sources */,
+				1BA5BB32276D1BEC0078E6A8 /* Frameworks */,
+				1BA5BB33276D1BEC0078E6A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PegSolitaireIOS;
+			productName = PegSolitaireIOS;
+			productReference = 1BA5BB35276D1BEC0078E6A8 /* PegSolitaireIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -108,6 +161,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					1BA5BB0F276D072E0078E6A8 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					1BA5BB34276D1BEC0078E6A8 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -126,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				1BA5BB0F276D072E0078E6A8 /* PegSolitaireSpriteKit */,
+				1BA5BB34276D1BEC0078E6A8 /* PegSolitaireIOS */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +194,15 @@
 			files = (
 				1BA5BB1E276D07300078E6A8 /* Assets.xcassets in Resources */,
 				1BA5BB21276D07300078E6A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA5BB33276D1BEC0078E6A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA5BB43276D1BED0078E6A8 /* Main.storyboard in Resources */,
+				1BA5BB45276D1BEE0078E6A8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +223,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BA5BB31276D1BEC0078E6A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA5BB4D276D1BFF0078E6A8 /* PegSolitaireHex.swift in Sources */,
+				1BA5BB4A276D1BFF0078E6A8 /* HexScene.swift in Sources */,
+				1BA5BB4E276D1BFF0078E6A8 /* GameScene.swift in Sources */,
+				1BA5BB40276D1BED0078E6A8 /* GameViewController.swift in Sources */,
+				1BA5BB4C276D1BFF0078E6A8 /* Tile.swift in Sources */,
+				1BA5BB38276D1BED0078E6A8 /* AppDelegate.swift in Sources */,
+				1BA5BB4B276D1BFF0078E6A8 /* PegSolitaireAdvanced.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -164,6 +244,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				1BA5BB20276D07300078E6A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1BA5BB41276D1BED0078E6A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BA5BB42276D1BED0078E6A8 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -328,6 +416,49 @@
 			};
 			name = Release;
 		};
+		1BA5BB48276D1BEE0078E6A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3PU6JKY2A;
+				INFOPLIST_FILE = PegSolitaireIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ubermaze.CloudKitTestMega.PegSolitaireIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BA5BB49276D1BEE0078E6A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3PU6JKY2A;
+				INFOPLIST_FILE = PegSolitaireIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ubermaze.CloudKitTestMega.PegSolitaireIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,6 +476,15 @@
 			buildConfigurations = (
 				1BA5BB27276D07300078E6A8 /* Debug */,
 				1BA5BB28276D07300078E6A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BA5BB47276D1BEE0078E6A8 /* Build configuration list for PBXNativeTarget "PegSolitaireIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA5BB48276D1BEE0078E6A8 /* Debug */,
+				1BA5BB49276D1BEE0078E6A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

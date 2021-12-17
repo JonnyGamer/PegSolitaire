@@ -1,22 +1,20 @@
 //
-//  ViewController.swift
-//  PegSolitaireSpriteKit
+//  GameViewController.swift
+//  PegSolitaireIOS
 //
 //  Created by Jonathan Pappas on 12/17/21.
 //
 
-import Cocoa
+import UIKit
 import SpriteKit
 import GameplayKit
 
-class ViewController: NSViewController {
+class GameViewController: UIViewController {
 
-    @IBOutlet var skView: SKView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let view = self.skView {
+        
+        if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             let scene = PegScene(size: CGSize.init(width: 1000, height: 1000))
             // Set the scale mode to scale to fit the window
@@ -31,5 +29,20 @@ class ViewController: NSViewController {
             view.showsNodeCount = true
         }
     }
-}
 
+    override var shouldAutorotate: Bool {
+        return true
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .allButUpsideDown
+        } else {
+            return .all
+        }
+    }
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+}

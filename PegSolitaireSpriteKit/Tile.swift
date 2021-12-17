@@ -8,6 +8,10 @@
 import Foundation
 import SpriteKit
 
+#if os(iOS)
+typealias NSColor = UIColor
+#endif
+
 class Tile: SKShapeNode {
     var peg = SKShapeNode(circleOfRadius: 40)
     var type: PegType = .empty

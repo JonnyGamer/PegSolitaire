@@ -54,9 +54,11 @@ class HexScene: SKScene {
         
     }
     
+    #if os(macOS)
     override func keyDown(with event: NSEvent) {
         undo()
     }
+    #endif
     
     func undo() {
         if !pegSolitaire.history.isEmpty {
@@ -66,6 +68,7 @@ class HexScene: SKScene {
         }
     }
     
+    #if os(macOS)
     override func mouseDown(with event: NSEvent) {
         // Figure out if you will tap a node with a name of "0 5" or "8 8" or something
         let nodesTapped = nodes(at: event.location(in: self))
@@ -79,6 +82,22 @@ class HexScene: SKScene {
             }
         }
     }
+    #endif
+    #if os(iOS)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Figure out if you will tap a node with a name of "0 5" or "8 8" or something
+        let nodesTapped = nodes(at: touches.first!.location(in: self))
+        for i in nodesTapped {
+            if let nodeName = i.name {
+                let splitName = nodeName.split(separator: " ")
+                if let x = Int(splitName[0]), let y = Int(splitName[1]) {
+                    pegSolitaire.tapped(x: x, y: y, tile: i as! Tile)
+                    return
+                }
+            }
+        }
+    }
+    #endif
     
 }
 

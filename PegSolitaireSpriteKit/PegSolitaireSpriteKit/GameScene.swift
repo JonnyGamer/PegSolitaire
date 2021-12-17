@@ -40,6 +40,7 @@ class PegScene: SKScene {
         boardNode.position.y += 50 * boardNode.xScale
         
         // Turn Label
+        pegSolitaire.pegsLeftLabel = SKLabelNode.init(text: "\(pegSolitaire.representation.players()) Pegs Left")
         addChild(pegSolitaire.pegsLeftLabel)
         pegSolitaire.pegsLeftLabel.zPosition = 100
         pegSolitaire.pegsLeftLabel.fontColor = .black
@@ -49,8 +50,19 @@ class PegScene: SKScene {
         pegSolitaire.pegsLeftLabel.setScale(2)
         pegSolitaire.pegsLeftLabel.fontSize *= pegSolitaire.pegsLeftLabel.xScale
         pegSolitaire.pegsLeftLabel.setScale(1)
-        pegSolitaire.pegsLeftLabel.text = "\(pegSolitaire.representation.players()) Pegs Left"
         
+    }
+    
+    override func keyDown(with event: NSEvent) {
+        undo()
+    }
+    
+    func undo() {
+        if !pegSolitaire.history.isEmpty {
+            pegSolitaire.representation = pegSolitaire.history.removeLast()
+            removeAllChildren()
+            didMove(to: view!)
+        }
     }
     
     override func mouseDown(with event: NSEvent) {
@@ -77,8 +89,10 @@ class PegSolitaireSpriteKit {
     var tiles: [[Tile]] = [[]]
     var selected: (x: Int, y: Int, tile: Tile)?
     var pegsLeftLabel: SKLabelNode = SKLabelNode(text: "_ Pegs Left")
+    var history: [PegSolitaireAdvanced] = []
     
     func tapped(x: Int, y: Int, tile: Tile) {
+        let was = representation
         
         func realFlip(x: Int, y: Int, dx: Int, dy: Int, hopping: Tile) {
             if representation.validHop(x: x, y: y, dx: dx, dy: dy) {
@@ -92,6 +106,7 @@ class PegSolitaireSpriteKit {
                 }
                 hopping.setTo(.empty)
                 selected = nil
+                history.append(was)
             }
         }
         

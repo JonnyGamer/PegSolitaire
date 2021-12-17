@@ -56,12 +56,12 @@ struct PegSolitaireHex: Hashable {
         width = 6
         height = 6
         grid = [
-             "••e•••",
-            "••pp••",
-             "•ppp••",
-            "•pppp•",
-             "ppppp•",
-            "pppppp",
+             "••p•••",
+            "••w ••",
+             "•w p••",
+            "•    •",
+             " w  p•",
+            "p p p ",
         ].reversed().convertTo()
         
         

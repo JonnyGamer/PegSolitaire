@@ -18,7 +18,7 @@ class ViewController: NSViewController {
 
         if let view = self.skView {
             // Load the SKScene from 'GameScene.sks'
-            let scene = PegScene(size: CGSize.init(width: 1000, height: 1000))
+            let scene = HexScene(size: CGSize.init(width: 1000, height: 1000))
             // Set the scale mode to scale to fit the window
             scene.scaleMode = .aspectFit
                 

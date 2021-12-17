@@ -14,6 +14,8 @@
 		1BA5BB21276D07300078E6A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA5BB1F276D07300078E6A8 /* Main.storyboard */; };
 		1BA5BB2A276D07940078E6A8 /* PegSolitaireAdvanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB29276D07940078E6A8 /* PegSolitaireAdvanced.swift */; };
 		1BA5BB2C276D08880078E6A8 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB2B276D08880078E6A8 /* Tile.swift */; };
+		1BA5BB2E276D12300078E6A8 /* HexScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB2D276D12300078E6A8 /* HexScene.swift */; };
+		1BA5BB30276D12440078E6A8 /* PegSolitaireHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5BB2F276D12440078E6A8 /* PegSolitaireHex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		1BA5BB23276D07300078E6A8 /* PegSolitaireSpriteKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PegSolitaireSpriteKit.entitlements; sourceTree = "<group>"; };
 		1BA5BB29276D07940078E6A8 /* PegSolitaireAdvanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PegSolitaireAdvanced.swift; sourceTree = "<group>"; };
 		1BA5BB2B276D08880078E6A8 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		1BA5BB2D276D12300078E6A8 /* HexScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexScene.swift; sourceTree = "<group>"; };
+		1BA5BB2F276D12440078E6A8 /* PegSolitaireHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PegSolitaireHex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +65,10 @@
 			children = (
 				1BA5BB13276D072E0078E6A8 /* AppDelegate.swift */,
 				1BA5BB19276D072E0078E6A8 /* GameScene.swift */,
-				1BA5BB2B276D08880078E6A8 /* Tile.swift */,
 				1BA5BB29276D07940078E6A8 /* PegSolitaireAdvanced.swift */,
+				1BA5BB2D276D12300078E6A8 /* HexScene.swift */,
+				1BA5BB2F276D12440078E6A8 /* PegSolitaireHex.swift */,
+				1BA5BB2B276D08880078E6A8 /* Tile.swift */,
 				1BA5BB1B276D072E0078E6A8 /* ViewController.swift */,
 				1BA5BB1D276D07300078E6A8 /* Assets.xcassets */,
 				1BA5BB1F276D07300078E6A8 /* Main.storyboard */,
@@ -141,8 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA5BB30276D12440078E6A8 /* PegSolitaireHex.swift in Sources */,
 				1BA5BB1C276D072E0078E6A8 /* ViewController.swift in Sources */,
 				1BA5BB1A276D072E0078E6A8 /* GameScene.swift in Sources */,
+				1BA5BB2E276D12300078E6A8 /* HexScene.swift in Sources */,
 				1BA5BB2C276D08880078E6A8 /* Tile.swift in Sources */,
 				1BA5BB14276D072E0078E6A8 /* AppDelegate.swift in Sources */,
 				1BA5BB2A276D07940078E6A8 /* PegSolitaireAdvanced.swift in Sources */,

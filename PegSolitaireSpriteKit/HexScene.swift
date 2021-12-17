@@ -96,6 +96,9 @@ class HexScene: SKScene {
                 }
             }
         }
+        if nodesTapped.isEmpty {
+            undo()
+        }
     }
     #endif
     

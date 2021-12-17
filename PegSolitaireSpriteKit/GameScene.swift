@@ -94,6 +94,9 @@ class PegScene: SKScene {
                 }
             }
         }
+        if nodesTapped.isEmpty {
+            undo()
+        }
     }
     #endif
     

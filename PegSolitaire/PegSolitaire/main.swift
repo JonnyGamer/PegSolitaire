@@ -17,4 +17,6 @@ import Foundation
 //392224
 //3352088
 
-PegSolitaireAdvanced().allSolutions()
+PegSolitaireHex().allSolutions()
+
+//PegSolitaireAdvanced().allSolutions()

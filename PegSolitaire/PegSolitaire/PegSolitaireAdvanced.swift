@@ -8,7 +8,7 @@
 import Foundation
 
 enum PegType {
-    case peg, empty, wall
+    case peg, empty, wall, trueWall
 }
 
 extension Set where Element == PegSolitaireAdvanced {
@@ -31,6 +31,7 @@ extension Array where Element == String {
                 case "e"," ": new[new.count-1].append(.empty)
                 case "p": new[new.count-1].append(.peg)
                 case "w": new[new.count-1].append(.wall)
+                case "•": new[new.count-1].append(.trueWall)
                 default: fatalError()
                 }
             }
@@ -43,10 +44,6 @@ struct PegSolitaireAdvanced: Hashable {
     var width: Int = 5
     var height: Int = 5
     var grid: [[PegType]]
-    static var allowsHoppingOverWalls = true
-    // Extension 1 : Allowed to hop over walls just fine
-    static var allowsWallsToHopOverWalls = true
-    // Extension 2 : Walls are allowed to hop over other walls ? Without them getting removed .?
     
     func hash(into hasher: inout Hasher) { hasher.combine(grid) }
     static func ==(lhs: Self, rhs: Self) -> Bool { lhs.grid == rhs.grid }
@@ -59,11 +56,11 @@ struct PegSolitaireAdvanced: Hashable {
         //grid = .init(repeating: .init(repeating: .peg, count: height), count: width)
         
         grid = [
-            " w  p",
-            " w   ",
+            "  w p",
+            "  ww ",
             "     ",
-            "p w  ",
-            "w  pw",
+            "    w",
+            " p   ",
         ].convertTo()
         
         
@@ -76,15 +73,19 @@ struct PegSolitaireAdvanced: Hashable {
         print(0, start.count)
         var moves = 1
         
+        var found = false
         while !start.isEmpty {
             start = start.tree(grandTotal: grandTotal)
             grandTotal = grandTotal.union(start)
             print(moves, start.count)
             
-            if let s = start.first, s.players() == 1 {
+            if !found {
                 for i in start {
-                    print(i.grid)
-                    print(i.moveHistory)
+                    if i.players() == 1 {
+                        found = true
+                        print(i.grid)
+                        print(i.moveHistory)
+                    }
                 }
             }
             
@@ -103,13 +104,13 @@ struct PegSolitaireAdvanced: Hashable {
                         var copy = self
                         
                         if copy.grid[x][y] == .peg {
+                            // RULE: If a peg hops over a peg, the hopped over peg disappears
                             if copy.grid[x + dx][y + dy] == .peg {
                                 copy.grid[x + dx][y + dy] = .empty
-                            } else if copy.grid[x + dx][y + dy] == .wall {
-                                //copy.grid[x + dx][y + dy] = .wall
                             }
                             copy.grid[x + dx + dx][y + dy + dy] = .peg
                         } else if copy.grid[x][y] == .wall {
+                            // RULE: Walls can only hop over walls
                             if copy.grid[x + dx][y + dy] != .wall {
                                 continue
                             }
@@ -130,8 +131,7 @@ struct PegSolitaireAdvanced: Hashable {
     func validHop(x: Int, y: Int, dx: Int, dy: Int) -> Bool {
         // Attempting to select an empty space
         if grid[x][y] == .empty { return false }
-        // Bonus rule disallowed
-        if !Self.allowsWallsToHopOverWalls, grid[x][y] == .wall { return false }
+        if grid[x][y] == .trueWall { return false }
         
         // Attempting to hop off board
         let newX = x + dx + dx
@@ -140,8 +140,7 @@ struct PegSolitaireAdvanced: Hashable {
         
         // Attempting to hop over an empty space
         if grid[x + dx][y + dy] == .empty { return false }
-        // Bonus rule disallowed
-        if !Self.allowsHoppingOverWalls, grid[x + dx][y + dy] == .wall { return false }
+        if grid[x + dx][y + dy] == .trueWall { return false }
         
         // Attempting to hop onto a reserved space
         if grid[newX][newY] != .empty { return false }

@@ -1,4 +1,18 @@
 ```
+        // Triangle
+        width = 6
+        height = 6
+        grid = [
+             "••e•••",
+            "••pp••",
+             "•ppp••",
+            "•pppp•",
+             "ppppp•",
+            "pppppp",
+        ].reversed().convertTo()
+```
+
+```
 0 1
 1 2
 2 8
